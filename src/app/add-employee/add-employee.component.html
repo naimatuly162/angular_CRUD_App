@@ -1,0 +1,42 @@
+
+<div >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add New Employee</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="form-group">
+            <label >First Name</label>
+            <input type="text" class="form-control"  formControlName="firstName" placeholder="Enter your First name">
+          </div>
+          <div class="form-group">
+            <label >Last Name</label>
+            <input type="text" class="form-control" id=" "  formControlName="lastName"  placeholder="Enter your last name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email"  formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="number"  formControlName="mobile" class="form-control" placeholder="phone number">
+          </div>
+          <div class="form-group">
+            <label>Salary</label>
+            <input type="number"  formControlName="salary" class="form-control" placeholder="salary">
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="cancel" data-dismiss="modal">Close</button>
+        <button type="submit" (click)="postEmployeeDetails()" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
